@@ -33,10 +33,23 @@ session_start();
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+        
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
+            <?php
+ 
+                if(!isset($_SESSION['uid'])){
+                     echo' <li class="nav-item">
+                     <a class="nav-link" href="login.php">Login</a>
+                     </li>';
+                          }
+                 else{
+                    echo' <li class="nav-item">
+                    <a class="nav-link" href="includes/logout.php">Logout</a>
+                     </li>';
+                      }
+                    ?>
+            <li class="nav-item">
                     <a class="nav-link" href="login.php">Login</a>
                 </li>
                 <li class="nav-item active">
