@@ -21,15 +21,15 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result)> 0) {
     while ($row = mysqli_fetch_assoc($reslult)) {
         $uname = $row['uname'];
-        $prosql = "SELECT picpath FROM profile WHERE uname='$uname';";
+        $prosql = "SELECT picpath from profile WHERE uname='$uname';";
         $res = mysqli_query($conn, $prosql);
         $picpath = mysqli_fetch_assoc($res);
         
         echo '
-        <div class="card-mx-auto" style="width: 30%; padding:5px; margin-bottom: 10px;">
+        <div class="card-mx-auto" style="width: 30%; padding: 5px; margin-bottom: 10px;">
             <div class = "media">
                 <img class ="mr-3" src ="'.$picpath['picpath'].'" style=max-width: 75px; max-height: 75px; border-radius: 50%;">
-                <div class= "media-body>
+                <div class= "media-body">
                     <h4 class="mt-0">'.$row['uname'].'</h4>
                     <h5 class="mt-0">'.$row['title'].'</h5>
                     <p>'.$row['rev_date'].'</p>
