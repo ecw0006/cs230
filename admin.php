@@ -13,8 +13,7 @@ require 'includes/dbhandler.php';
             <div class="my-auto upload-container">
                 <form action="includes/gallery-helper.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
-                        <img src="uploads/birb.jpg" onclick="triggered();" id="gallery-display">
-                        <label for="prof-image" id="uname-style"> <?php echo $prof_user; ?></label>
+                        <img src="images/dog.jpg" onclick="triggered();" id="gallery-display">
                         <input type="file" name="gallery-image" id="gallery-image" onchange="preview(this)" class="form-control" style="display: none;">
                         <input type="text" name="title" id="title" class="form-control" placeholder="title" required>
                     </div>
