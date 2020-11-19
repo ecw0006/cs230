@@ -5,5 +5,5 @@ session_unset();
 
 session_destroy();
 
-header("Location: ../about.php");
+header("Location: ../index.php");
 exit();
